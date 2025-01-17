@@ -33,8 +33,25 @@ body{
     top: 8px;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
+
+.file-header {
+    background-color: rgba(113, 77, 42, 1);
+}
+
+.file1-header {
+    background-color: rgba(113, 77, 42, 1);
+}
+
+
+.file3-header {
+    background-color: rgba(169, 221, 56, 0.68);
+}
+
+.file2-header {
+    background-color: rgba(24, 57, 105, 1);
+}
+
 .sf {
     width: 109px;
     flex: 0;
@@ -66,10 +83,48 @@ a {
     font-size: 26px;
     color: #dcc8b7;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width:100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
+.dropdown-content a:nth-child(1) {
+    color: #59422E;
+    background-color: rgba(247, 243, 214, 0.46);
+}
+
+.dropdown-content a:nth-child(2) {
+    color: #183969;
+    background-color: rgba(168, 208, 251, 0.46);
+}
+
+.dropdown-content a:nth-child(3) {
+    color: #a9dd38;
+    background-color: #3B2716;
+}
+
+.dropdown-content a:hover {
+    opacity: 0.8;
+}
 /* Форма регистрации */
 .registration-form {
     display: none; /* Скрыта по умолчанию */
