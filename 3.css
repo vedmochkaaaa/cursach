@@ -1,0 +1,136 @@
+
+/* Устанавливаем основной фон на всю страницу */
+body {
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: white;
+}
+
+/* Стили для верхней шапки с меню */
+.top-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(113, 77, 42, 1);
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sf {
+    width: 109px;
+    flex: 0;
+    height: 43px;
+    font-family: "Rozha One-Regular", Helvetica;
+    font-weight: 400;
+    color: #f7f2ee;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 13.44px;
+    line-height: normal;
+    padding: 8px;
+}
+
+.top-header a {
+    font-family: "Alumni Sans SC-SemiBold", Helvetica;
+    text-decoration: none;
+    font-size: 26px;
+    color: #dcc8b7;
+}
+
+.top-header a:hover {
+    text-decoration: underline;
+}
+
+.main-section {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 100px auto 0;
+    width: 93%;
+    /* padding: 0px; */
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Фото (левая часть) */
+.main-section img {
+    flex: 0 1 46%;
+    max-width: 100%;
+    width: 56%;
+    /* max-height: 43%; */
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+
+/* Форма (правая часть) */
+.registration-form {
+    flex: 0 1 30%;
+    max-width: 50%;
+    background-color: #272727;
+    padding: 32px;
+    margin-left: 25px;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px;*/
+}
+
+.registration-form h2 {
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 65px;
+    text-align: center;
+    background: linear-gradient(90deg, #775436 28.22%, #935A22 32.81%, #CE7A29 42.45%, #9E5712 52.32%, #CE7A29 56.67%, #8F5925 66.08%, #775436 74.12%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.registration-form input,
+.registration-form button {
+    background: rgba(177, 160, 143, 1);
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.registration-form button {
+    background: linear-gradient(90deg, rgba(56, 31, 7, 0.63) 0%, rgba(118, 65, 14, 0.63) 21%, rgba(156, 86, 18, 0.63) 43%, rgba(157, 87, 18, 0.63) 57%, rgba(158, 87, 18, 0.63) 67%, rgba(126, 70, 15, 0.63) 82%, rgba(62, 34, 7, 0.63) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.registration-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Для маленьких экранов */
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-section img,
+    .registration-form {
+        flex: none;
+        width: 100%; /* Занимают всю ширину экрана */
+        margin: 10px 0;
+    }
+}

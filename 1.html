@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="1.css" />
-
     <title>SMARTFOOD Макет</title>
 </head>
 <body>
-  <div class="group">
-    <div class="rectangle">
-        <div class="text-wrapper">Рецепты</div>
-        <div class="text-wrapper">Наша команда</div>
-        <div class="text-wrapper">Версия для людей с ОВЗ</div>
-        <div class="text-wrapper sf">SF</div> <!-- SF по центру -->
-        <div class="text-wrapper">Советы</div>
-        <div class="text-wrapper">Услуги</div>
-        <div class="text-wrapper">Войти</div>
 
+    <div class="top-header">
+        <a href="#">Рецепты</a>
+        <a href="#">Наша команда</a>
+        <a href="#">ЛСОВ</a>
+        <div class="sf">SF</div>
+        <a href="#">Советы</a>
+        <a href="#">Услуги</a>
+
+        <div class="hover-wrapper">
+            <a href="#">Войти</a>
+
+            <div class="registration-form" id="registration-form">
+                <form action="#" method="post">
+                    <label for="username">Имя пользователя:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Введите имя пользователя" required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Введите адрес электронной почты" required><br><br>
+                    <label for="password">Пароль:</label><br>
+                    <input type="password" id="password" name="password" placeholder="Введите пароль" required><br><br>
+                    <button class="username-btn" type="submit">Войти</button>
+                    <a class="username-btn" href="3.html">Регистрация</a>
+                </form>
+            </div>
+        </div>
     </div>
-    <img src="frame.png" alt="Макет из Figma" style="width: 100%; height: auto;" class="layout-image" />
-  </div>
-</body>
+    <img src="frame2.png" alt="Макет из Figma" style="width: 100%; height: auto;" class="layout-image" />
 
+</body>
 </html>
