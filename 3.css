@@ -5,21 +5,78 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    color: white;
 }
 
-/* Стили для верхней шапки с меню */
+h3{
+color:white;
+}
+
+.two {
+    background: rgba(148, 94, 40, 0.66)
+    margin: 16;
+    padding:16;
+    height: 100vh; /* Высота в 100% от высоты экрана */
+    display: flex; /* Используем flexbox для вертикального расположения */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрируем элементы по горизонтали */
+}
+
 .top-header {
+    width: 100%; /* Занимаем полную ширину */
+    background-color: rgba(113, 77, 42, 1); /* Непрозрачный фон для шапки */
+    color: white; /* Цвет текста белый */
+    padding: 10px 20px; /* Отступы */
+    display: flex; /* Flexbox для расположения элементов шапки */
+    justify-content: space-around; /* Распределение элементов с равными отступами */
+    align-items: center; /* Центрируем вертикально */
+    position: fixed; /* Фиксируем шапку */
+    top: 0; /* Прикрепляем к верхней границе */
+    left: 0; /* Прикрепляем к левой границе */
+    z-index: 1000; /* Чтобы шапка была сверху других элементов */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень под шапкой */
+}
+
+.categories {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(113, 77, 42, 1);
-    padding: 10px 0;
     width: 100%;
-    position: fixed;
-    top: 8px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    margin-top: 70px;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 10px;
+    justify-content: center;
+    margin-bottom: 70px;
+
+}
+
+.category-card {
+    background-color: white; /* Фон карточки белый */
+    border-radius: 35px; /* Закругленные углы */
+    padding: 15px; /* Отступы внутри карточки */
+    width: 200px; /* Ширина карточки */
+    height: 200px; /* Высота карточки, чтобы сделать ее квадратной */
+    margin: 10px; /* Отступы между карточками */
+    text-align: center; /* Центрируем текст */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Более заметная тень */
+    transition: transform 0.2s; /* Плавный переход при наведении */
+}
+
+.category-card:hover {
+    transform: scale(1.05); /* Увеличиваем карточку при наведении */
+}
+
+.category-card img {
+    width: 100%; /* Полная ширина изображения */
+    height: 100%; /* Соотношение сторон */
+    border-radius: 35px; /* Закругленные углы для изображений */
+    object-fit: cover; /* Чтобы сохранить соотношение сторон изображения */
+}
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: flex-start;
 }
 
 .sf {
