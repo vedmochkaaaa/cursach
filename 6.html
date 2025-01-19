@@ -12,9 +12,37 @@
       <div><img src="logo1.png" style="width: 80%; height: auto" /></div>
       <a href="1.html">Главная</a>
       <a href="#">Версия для слабовидящих</a>
-      <a href="#">Советы</a>
-      <a href="#">Услуги</a>
-      <a href="#">Войти</a>
+      <a href="#category">Категории</a>
+      <a href="#uslugi">Услуги</a>
+      <div class="hover-wrapper1">
+        <a href="#">Войти</a>
+        <div class="registration-form1" id="registration-form1">
+          <form action="#" method="post">
+            <label for="username">Имя пользователя:</label><br /><input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Введите имя пользователя"
+              required
+            /><br /><br /><label for="email">Email:</label><br /><input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Введите адрес электронной почты"
+              required
+            /><br /><br /><label for="password">Пароль:</label><br /><input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Введите пароль"
+              required
+            /><br /><br /><button class="username-btn1" type="submit">
+              Войти
+            </button>
+            <a class="username-btn1" href="3.html">Регистрация</a>
+          </form>
+        </div>
+      </div>
     </div>
 
     <img
@@ -41,7 +69,7 @@
     </div>
 
     <!-- Слайд с категориями рецептов -->
-    <div class="categories">
+    <div class="categories" id="category">
       <div class="category-card">
         <img src="category1.jpg" alt="Категория 1" />
         <a href="#"><h2>Завтраки</h2></a>
@@ -63,11 +91,13 @@
         <a href="#"><h2>Салаты</h2></a>
       </div>
     </div>
-    <img
-      src="pg6.png"
-      alt="Макет из Figma"
-      style="width: 100%; height: auto"
-      class="layout-image"
-    />
+    <div id="uslugi">
+      <img
+        src="pg6.png"
+        alt="Макет из Figma"
+        style="width: 100%; height: auto"
+        class="layout-image"
+      />
+    </div>
   </body>
 </html>
