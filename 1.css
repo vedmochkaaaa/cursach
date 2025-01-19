@@ -14,12 +14,6 @@ body{
     display: inline-block; /* Универсальный блок для обработки содержимого */
 }
 
-.gif-container {
-    position: absolute; /* Абсолютное позиционирование для GIF */
-    left: 10%; /* положение слева */
-    top: 50%; /* позиция по вертикали */
-    transform: translateY(-50%); /* центрирование по вертикали */
-}
 /* Базовые стили обертки */
 .top-header {
 
@@ -50,20 +44,6 @@ body{
 
 .file2-header {
     background-color: rgba(24, 57, 105, 1);
-}
-
-.sf {
-    width: 109px;
-    flex: 0;
-    height: 43px;
-    font-family: "Rozha One-Regular", Helvetica;
-    font-weight: 400;
-    color: #f7f2ee;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 13.44px;
-    line-height: normal;
-    padding: 8px;
 }
 
 .top-header a {
@@ -285,8 +265,4 @@ a {
     letter-spacing: 3px;
   }
 
-  .sf {
-    font-size: 20px;
-    letter-spacing: 5px;
-  }
 }
