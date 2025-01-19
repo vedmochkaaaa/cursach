@@ -105,6 +105,30 @@ body {
         height:60%
     }
 }
+/* Адаптивные стили для экранов до 1000px */
+@media (max-width: 1000px) {
+    body {
+        margin: 15px; /* Уменьшаем отступы для меньших экранов */
+    }
+
+    .overlay-images {
+        top:20%; /* Смещаем сверху для лучшего вида */
+    }
+
+    .overlay-image {
+        margin: 10px; /* Убираем отступы между изображениями на меньших экранах */
+        width: 30%; /* Увеличиваем ширину наложенных изображений */
+    }
+
+    .overlay-images1 .overlay-image1:nth-of-type(1) {
+        margin: 0px 8px; /* Убираем отступ справа у последнего изображения */
+    }
+
+    .overlay-images1 {
+        height: 70%; /* Увеличиваем высоту для лучшей компоновки */
+    }
+}
+
 
 /* Базовые стили обертки */
 .top-header {
@@ -177,7 +201,19 @@ a {
         box-sizing: border-box; /* Учитываем padding в ширине */
     }
 }
+/* Адаптация для устройств с шириной до 1000px */
+@media (max-width: 1000px) {
+  .top-header {
+    flex-direction: row;
+    align-items: center;
+  }
 
+  .top-header a {
+        font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
+        margin: 5px 0; /* Отступ между ссылками */
+    }
+
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -347,19 +383,5 @@ h1 {
 
 
 
-/* Адаптация для устройств с шириной до 1000px */
-@media (max-width: 1000px) {
-  .top-header {
-    flex-direction: row;
-    align-items: center;
-  }
 
-a {
-    margin: 5px 0;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 3px;
-  }
-
-}
 
