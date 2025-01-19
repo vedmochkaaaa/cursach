@@ -150,18 +150,6 @@ body {
   background-color: rgba(113, 77, 42, 1);
 }
 
-.file1-header {
-  background-color: rgba(113, 77, 42, 1);
-}
-
-.file3-header {
-  background-color: rgba(169, 221, 56, 0.68);
-}
-
-.file2-header {
-  background-color: rgba(24, 57, 105, 1);
-}
-
 .top-header a {
   font-family: "Alumni Sans SC-SemiBold", Helvetica;
   text-decoration: none;

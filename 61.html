@@ -6,18 +6,13 @@
     <title>Рецепты</title>
     <link rel="stylesheet" href="3.css" />
   </head>
-  <body class="two">
+  <body class="two" style="background-color:#F7F3D6;">
     <!-- Верхняя шапка с меню -->
     <div class="top-header">
       <div><img src="logo1.png" style="width: 80%; height: auto" /></div>
-      <a href="1.html">Главная</a>
-      <a href="6.html">Рецепты</a>
-      <div class="dropdown">
-        <a>Версия для слабовидящи</a>
-        <div class="dropdown-content">
-          <a href="111.html">Аа</a>
-        </div>
-      </div>
+      <a href="2.html">Главная</a>
+      <a href="6.html">Обычная версия</a>
+      <a href="#category">Категории</a>
       <a href="#uslugi">Услуги</a>
       <div class="hover-wrapper1">
         <a href="#">Войти</a>
@@ -51,23 +46,54 @@
     </div>
 
     <img
-      src="desserts.png"
+      src="orange13.png"
       alt="Макет из Figma"
       style="width: 100%; height: auto"
       class="layout-image"
     />
+
+    <!-- Рецепт с фото и формой -->
+    <div class="main-section">
+      <!-- Гиф справа -->
+      <img src="sirnrkr.gif" style="max-width: 50%; height: auto" />
+      <!-- Рецепт слева -->
+      <img src="recip.png" style="max-width: 40%; height: auto" />
+    </div>
     <!-- Рецепт с фото и формой -->
     <div class="main-section">
       <video style="max-width: 60%; height: auto" controls>
-        <source src="dessers.mp4" type="video/mp4" />
+        <source src="v1.mp4" type="video/mp4" />
       </video>
       <!-- Рецепт слева -->
-      <img src="dess.png" style="max-width: 40%; height: auto" />
+      <img src="recip1.png" style="max-width: 40%; height: auto" />
     </div>
+
+    <!-- Слайд с категориями рецептов -->
+    <div class="categories" id="category">
+      <div class="category-card">
+        <a href="81.html"><img src="category1.jpg" alt="Категория 1" />
+        <h2>Завтраки</h2></a>
+      </div>
+      <div class="category-card">
+        <a href="91.html"><img src="category2.png" alt="Категория 2" />
+        <h2>Ужины</h2></a>
+      </div>
+      <div class="category-card">
+        <a href="101.html"><img src="category4.jpg" alt="Категория 4" />
+        <h2>Обеды</h2></a>
+      </div>
+      <div class="category-card">
+        <a href="111.html"><img src="category3.jpg" alt="Категория 3" />
+        <h2>Десерты</h2></a>
+      </div>
+      <div class="category-card">
+        <a href="121.html"><img src="category5.jpg" alt="Категория 5" />
+        <h2>Салаты</h2></a>
+      </div>
     </div>
-      <div id="uslugi">
+    <div id="uslugi">
       <img
-        src="pg6.png"
+        src="orange6.png"
         alt="Макет из Figma"
         style="width: 100%; height: auto"
         class="layout-image"
@@ -75,3 +101,4 @@
     </div>
   </body>
 </html>
+
