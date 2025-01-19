@@ -182,7 +182,6 @@ a {
 /* Адаптивные стили */
 @media (max-width: 768px) {
     .top-header {
-        flex-direction: column; /* Вертикальная ориентация */
         align-items: stretch;   /* Растянуть элементы на всю ширину */
         padding: 10px;          /* Уменьшаем внутренние отступы */
     }

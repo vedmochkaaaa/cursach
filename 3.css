@@ -1,4 +1,3 @@
-
 /* Устанавливаем основной фон на всю страницу */
 body {
     background-color: #181818;
@@ -7,15 +6,15 @@ body {
     height: 100vh;
 }
 
-h2{
-color:white;
-text-decoration: none;
+h2 {
+    color: white;
+    text-decoration: none;
 }
 
 .two {
-    background: rgba(148, 94, 40, 0.66)
+
     margin: 16px;
-    padding:16px;
+    padding: 16px;
     height: 100vh; /* Высота в 100% от высоты экрана */
     display: flex; /* Используем flexbox для вертикального расположения */
     flex-direction: column; /* Вертикальное расположение элементов */
@@ -47,7 +46,6 @@ text-decoration: none;
     padding: 10px;
     justify-content: center;
     margin-bottom: 70px;
-
 }
 
 .category-card {
@@ -71,6 +69,49 @@ text-decoration: none;
     height: 100%; /* Соотношение сторон */
     border-radius: 35px; /* Закругленные углы для изображений */
     object-fit: cover; /* Чтобы сохранить соотношение сторон изображения */
+}
+
+/* Адаптивные стили для экранов до 768px */
+@media (max-width: 768px) {
+    .top-header {
+
+        align-items: stretch;   /* Растянуть элементы на всю ширину */
+        padding: 10px;          /* Уменьшаем внутренние отступы */
+    }
+
+    .top-header a {
+        font-size: 10px; /* Уменьшаем размер шрифта на мобильных */
+        margin: 5px 0; /* Отступ между ссылками */
+    }
+
+    .categories {
+
+        align-items: center; /* Центрируем карточки по горизонтали */
+        width: 15%;
+        /* height: 50%; */
+        padding: 5px;
+
+    }
+}
+
+/* Адаптивные стили для экранов до 1000px */
+@media (max-width: 1000px) {
+
+    .top-header {
+        align-items: stretch; /* Растянуть элементы на всю ширину */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    .top-header a {
+        font-size: 12px; /* Уменьшаем размер шрифта на экранах до 1000px */
+        margin: 5px 0; /* Отступ между ссылками */
+    }
+
+    .categories {
+        align-items: center; /* Центрируем карточки по горизонтали */
+        width: 25%; /* Увеличиваем ширину карточек для лучшего отображения */
+        padding: 5px;
+    }
 }
 
 .main-section {
@@ -111,7 +152,6 @@ text-decoration: none;
     align-items: stretch;
     margin: 100px auto 0;
     width: 93%;
-    /* padding: 0px; */
     box-sizing: border-box;
     flex-direction: row;
     justify-content: center;
@@ -122,7 +162,6 @@ text-decoration: none;
     flex: 0 1 46%;
     max-width: 100%;
     width: 56%;
-    /* max-height: 43%; */
     border-radius: 8px;
     margin-right: 10px;
 }
@@ -131,22 +170,43 @@ text-decoration: none;
     flex: 0 1 46%;
     max-width: 100%;
     width: 56%;
-    /* max-height: 43%; */
     border-radius: 8px;
     margin-right: 10px;
 }
 
+/* Адаптивные стили для экранов до 768px */
+@media (max-width: 768px) {
+    .main-section img,
+    .main-section video {
+        width: 20%; /* Полная ширина для изображений и видео */
+}
 
-/* Форма (правая часть) */
+    .top-header a {
+        font-size: 12px; /* Уменьшаем размер шрифта ссылок для мобильных */
+    }
+}
+
+/* Адаптивные стили для экранов до 1000px */
+@media (max-width: 1000px) {
+
+    .main-section img,
+    .main-section video {
+        width: 40%; /* Увеличиваем ширину для изображений и видео для лучшего отображения */
+    }
+
+    .top-header a {
+        font-size: 14px; /* Увеличиваем размер шрифта ссылок для более широких экранов */
+    }
+}
+
+//* Форма (правая часть) */
 .registration-form {
     flex: 0 1 30%;
     max-width: 50%;
     background-color: #272727;
     padding: 32px;
     margin-left: 25px;
-    /* border: 1px solid #ddd; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* border-radius: 8px;*/
 }
 
 .registration-form h2 {
@@ -182,22 +242,53 @@ text-decoration: none;
     cursor: pointer;
 }
 
-
 .registration-form button:hover {
     background-color: #0056b3;
 }
 
-/* Для маленьких экранов */
+/* Адаптивные стили для экранов до 768px */
 @media (max-width: 768px) {
-    .main-section {
-        flex-direction: column;
-        align-items: center;
+    .registration-form {
+        flex: 0 1 100%; /* Полная ширина формы на мобильных */
+        max-width: 100%; /* Сбрасываем максимальную ширину */
+        margin-left: 0; /* Убираем левый отступ */
+        padding: 16px; /* Уменьшаем внутренние отступы */
     }
 
-    .main-section img,
+    .registration-form h2 {
+        font-size: 28px; /* Уменьшаем размер заголовка */
+        line-height: 40px; /* Уменьшаем высоту строки заголовка */
+    }
+
+    .registration-form input,
+    .registration-form button {
+        height: 45px; /* Уменьшаем высоту полей ввода и кнопки */
+        font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
+        margin-bottom: 30px; /* Уменьшаем отступ между полями */
+    }
+    gp{
+
+    }
+}
+/* Адаптивные стили для экранов до 1000px */
+@media (max-width: 1000px) {
     .registration-form {
-        flex: none;
-        width: 100%; /* Занимают всю ширину экрана */
-        margin: 10px 0;
+        flex: 0 1 90%; /* Увеличиваем ширину формы до 90% для больших мобильных устройств */
+        max-width: 100%; /* Сбрасываем максимальную ширину */
+        margin-left: auto; /* Центрируем форму */
+        margin-right: auto; /* Центрируем форму */
+        padding: 16px; /* Сохраняем внутренние отступы */
+    }
+
+    .registration-form h2 {
+        font-size: 30px; /* Увеличиваем размер заголовка для более крупных экранов */
+        line-height: 42px; /* Увеличиваем высоту строки заголовка */
+    }
+
+    .registration-form input,
+    .registration-form button {
+        height: 50px; /* Увеличиваем высоту полей ввода и кнопки */
+        font-size: 20px; /* Увеличиваем размер шрифта для лучшей читаемости */
+        margin-bottom: 25px; /* Уменьшаем отступ между полями */
     }
 }
