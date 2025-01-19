@@ -52,7 +52,6 @@
   padding: 5px;
 }
 
-
 /* Общие стили контейнера */
 .group {
   position: relative;
@@ -67,17 +66,16 @@
   justify-content: flex-end; /* Чтобы элементы располагались справа */
 }
 
-
 /* Форма регистрации поверх фото */
 .registration-form {
-    position: absolute;
-    right: 10%;
-    top: auto;
-    transform: translateY(60%);
-    width: 400px;
-    height: 500px;
-    /* padding: 0px; */
-    color: lightyellow;
+  position: absolute;
+  right: 10%;
+  top: auto;
+  transform: translateY(60%);
+  width: 400px;
+  height: 500px;
+  /* padding: 0px; */
+  color: lightyellow;
 }
 
 /* Декорирование текста и кнопок */
@@ -102,7 +100,16 @@
 .registration-form button {
   width: 100%;
   padding: 10px;
-  background: linear-gradient(90deg, rgba(56, 31, 7, 0.63) 0%, rgba(118, 65, 14, 0.63) 21%, rgba(156, 86, 18, 0.63) 43%, rgba(157, 87, 18, 0.63) 57%, rgba(158, 87, 18, 0.63) 67%, rgba(126, 70, 15, 0.63) 82%, rgba(62, 34, 7, 0.63) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(56, 31, 7, 0.63) 0%,
+    rgba(118, 65, 14, 0.63) 21%,
+    rgba(156, 86, 18, 0.63) 43%,
+    rgba(157, 87, 18, 0.63) 57%,
+    rgba(158, 87, 18, 0.63) 67%,
+    rgba(126, 70, 15, 0.63) 82%,
+    rgba(62, 34, 7, 0.63) 100%
+  );
   border-radius: 10px;
   color: white;
   border: none;
@@ -120,38 +127,36 @@
 }
 
 .registration-form .login-link a {
-  color: #007BFF;
+  color: #007bff;
 }
 
 .registration-form .login-link a:hover {
   text-decoration: underline;
 }
 
-
 @media (max-width: 480px) {
-    .registration-form {
-        width: 90%;
-        right: 5%;
-        top: calc(100% + 10px);
-    }
+  .registration-form {
+    width: 90%;
+    right: 5%;
+    top: calc(100% + 10px);
+  }
 
-    .registration-form h3 {
-        font-size: 20px;
-    }
+  .registration-form h3 {
+    font-size: 20px;
+  }
 
-    .registration-form input[type="text"],
-    .registration-form input[type="email"],
-    .registration-form input[type="password"] {
-        font-size: 12px;
-        padding: 8px;
-    }
+  .registration-form input[type="text"],
+  .registration-form input[type="email"],
+  .registration-form input[type="password"] {
+    font-size: 12px;
+    padding: 8px;
+  }
 
-    .registration-form input[type="submit"] {
-        font-size: 14px;
-        padding: 8px;
-    }
+  .registration-form input[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
-
 
 /* Адаптация для устройств с шириной до 1000px */
 @media (max-width: 1000px) {

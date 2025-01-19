@@ -1,204 +1,206 @@
 body {
-    background-color: black;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    margin: 20px;
-    padding: 0;
+  background-color: black;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 0;
 }
 
 .container {
-    display: flex;
-    justify-content: center; /* Центрирование основного изображения */
-    align-items: center; /* Вертикальное выравнивание */
-    position: relative; /* Для абсолютного позиционирования наложенных изображений */
+  display: flex;
+  justify-content: center; /* Центрирование основного изображения */
+  align-items: center; /* Вертикальное выравнивание */
+  position: relative; /* Для абсолютного позиционирования наложенных изображений */
 }
 
 .container1 {
-    position: relative;
-    text-align: center;
-    margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .bottom-image {
-    position: relative;
-    bottom: 10px; /* Отступ от низа */
-    right: 10px; /* Отступ от правого края */
-    width: 30%; /* Ширина нижнего изображения */
-    z-index: 1; /* Уровень над фоновым изображением */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Плавный переход */
+  position: relative;
+  bottom: 10px; /* Отступ от низа */
+  right: 10px; /* Отступ от правого края */
+  width: 30%; /* Ширина нижнего изображения */
+  z-index: 1; /* Уровень над фоновым изображением */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Плавный переход */
 }
 
 .bottom-image:hover {
-    transform: scale(1.1); /* Увеличение размера при наведении */
-    border-radius: 138px;
-    background-color: purple;
+  transform: scale(1.1); /* Увеличение размера при наведении */
+  border-radius: 138px;
+  background-color: purple;
 }
 
 .layout-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .overlay-images {
-    position: absolute;
-    display: flex; /* flex для размещения наложенных изображений в ряд */
-    justify-content: space-around; /* Распределение наложенных изображений с отступами */
-    width: 100%; /* Занять полную ширину контейнера */
-    top: 25%; /* Расположение относительно основного изображения */
+  position: absolute;
+  display: flex; /* flex для размещения наложенных изображений в ряд */
+  justify-content: space-around; /* Распределение наложенных изображений с отступами */
+  width: 100%; /* Занять полную ширину контейнера */
+  top: 25%; /* Расположение относительно основного изображения */
 }
 
 .overlay-image {
-    margin: 10px; /* Отступы вокруг наложенных изображений */
-    transition: transform 0.3s ease; /* Плавный переход для эффекта увеличения */
+  margin: 10px; /* Отступы вокруг наложенных изображений */
+  transition: transform 0.3s ease; /* Плавный переход для эффекта увеличения */
 }
 
 .overlay-image:hover {
-    transform: scale(1.1); /* Увеличение размера при наведении на каждую картинку */
+  transform: scale(
+    1.1
+  ); /* Увеличение размера при наведении на каждую картинку */
 }
 
 .overlay-images1 {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    height: 75%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-between; /* Или space-evenly по вашему желанию */
-    flex-wrap: nowrap;
-    align-items: center;
-    width: auto; /* Убедитесь, что ширина динамическая для мобильных размеров */
-    margin: 0; /* Уберите margin с родителя */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 75%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between; /* Или space-evenly по вашему желанию */
+  flex-wrap: nowrap;
+  align-items: center;
+  width: auto; /* Убедитесь, что ширина динамическая для мобильных размеров */
+  margin: 0; /* Уберите margin с родителя */
 }
 
-.overlay-image1, .overlay-image {
-    margin: 0 15px; /* Установите отступы между самими изображениями */
+.overlay-image1,
+.overlay-image {
+  margin: 0 15px; /* Установите отступы между самими изображениями */
 }
 
 .overlay-images1 .overlay-image1:nth-of-type(3) {
-    height: 75%;
+  height: 75%;
 }
 
 .overlay-images1 .overlay-image1:nth-of-type(1) {
-    height: 75%;
-    margin: 0px 100px; /* Уберите отступ справа у последнего изображения */
+  height: 75%;
+  margin: 0px 100px; /* Уберите отступ справа у последнего изображения */
 }
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
-    body {
-        margin: 10px; /* Уменьшаем отступы на мобильных */
-    }
+  body {
+    margin: 10px; /* Уменьшаем отступы на мобильных */
+  }
 
-    .overlay-images {
-        top: 20%; /* Смещаем сверху для лучшего вида */
-    }
+  .overlay-images {
+    top: 20%; /* Смещаем сверху для лучшего вида */
+  }
 
-    .overlay-image {
-        margin: 5px; /* Убираем отступы между изображениями на мобильных */
-        width: 20%; /* Увеличиваем ширину наложенных изображений */
-    }
-    .overlay-images1 .overlay-image1:nth-of-type(1) {
-        margin: 0px 10px; /* Уберите отступ справа у последнего изображения */
-    }
+  .overlay-image {
+    margin: 5px; /* Убираем отступы между изображениями на мобильных */
+    width: 20%; /* Увеличиваем ширину наложенных изображений */
+  }
+  .overlay-images1 .overlay-image1:nth-of-type(1) {
+    margin: 0px 10px; /* Уберите отступ справа у последнего изображения */
+  }
 
-    .overlay-images1 {
-        height:60%
-    }
+  .overlay-images1 {
+    height: 60%;
+  }
 }
 /* Адаптивные стили для экранов до 1000px */
 @media (max-width: 1000px) {
-    body {
-        margin: 15px; /* Уменьшаем отступы для меньших экранов */
-    }
+  body {
+    margin: 15px; /* Уменьшаем отступы для меньших экранов */
+  }
 
-    .overlay-images {
-        top:20%; /* Смещаем сверху для лучшего вида */
-    }
+  .overlay-images {
+    top: 20%; /* Смещаем сверху для лучшего вида */
+  }
 
-    .overlay-image {
-        margin: 10px; /* Убираем отступы между изображениями на меньших экранах */
-        width: 30%; /* Увеличиваем ширину наложенных изображений */
-    }
+  .overlay-image {
+    margin: 10px; /* Убираем отступы между изображениями на меньших экранах */
+    width: 30%; /* Увеличиваем ширину наложенных изображений */
+  }
 
-    .overlay-images1 .overlay-image1:nth-of-type(1) {
-        margin: 0px 8px; /* Убираем отступ справа у последнего изображения */
-    }
+  .overlay-images1 .overlay-image1:nth-of-type(1) {
+    margin: 0px 8px; /* Убираем отступ справа у последнего изображения */
+  }
 
-    .overlay-images1 {
-        height: 70%; /* Увеличиваем высоту для лучшей компоновки */
-    }
+  .overlay-images1 {
+    height: 70%; /* Увеличиваем высоту для лучшей компоновки */
+  }
 }
-
 
 /* Базовые стили обертки */
 .top-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(113, 77, 42, 1);
-    padding: 10px 0;
-    width: 100%;
-    position: fixed;
-    top: 8px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(113, 77, 42, 1);
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .file-header {
-    background-color: rgba(113, 77, 42, 1);
+  background-color: rgba(113, 77, 42, 1);
 }
 
 .file1-header {
-    background-color: rgba(113, 77, 42, 1);
+  background-color: rgba(113, 77, 42, 1);
 }
 
 .file3-header {
-    background-color: rgba(169, 221, 56, 0.68);
+  background-color: rgba(169, 221, 56, 0.68);
 }
 
 .file2-header {
-    background-color: rgba(24, 57, 105, 1);
+  background-color: rgba(24, 57, 105, 1);
 }
 
 .top-header a {
-    font-family: "Alumni Sans SC-SemiBold", Helvetica;
-    text-decoration: none;
-    font-size: 26px;
-    color: #dcc8b7;
+  font-family: "Alumni Sans SC-SemiBold", Helvetica;
+  text-decoration: none;
+  font-size: 26px;
+  color: #dcc8b7;
 }
 
 .top-header a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Стиль текстовой обертки */
 a {
-    font-family: "Alumni Sans SC-SemiBold", Helvetica;
-    text-decoration: none;
-    font-size: 26px;
-    color: #dcc8b7;
+  font-family: "Alumni Sans SC-SemiBold", Helvetica;
+  text-decoration: none;
+  font-size: 26px;
+  color: #dcc8b7;
 }
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
-    .top-header {
-        align-items: stretch;   /* Растянуть элементы на всю ширину */
-        padding: 10px;          /* Уменьшаем внутренние отступы */
-    }
+  .top-header {
+    align-items: stretch; /* Растянуть элементы на всю ширину */
+    padding: 10px; /* Уменьшаем внутренние отступы */
+  }
 
-    .top-header a {
-        font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
-        margin: 5px 0; /* Отступ между ссылками */
-    }
+  .top-header a {
+    font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
+    margin: 5px 0; /* Отступ между ссылками */
+  }
 
-    .file-header,
-    .file1-header,
-    .file2-header,
-    .file3-header {
-        padding: 10px; /* Увеличение отступов для элементов */
-        width: 100%; /* Ширина 100% для мобильных */
-        box-sizing: border-box; /* Учитываем padding в ширине */
-    }
+  .file-header,
+  .file1-header,
+  .file2-header,
+  .file3-header {
+    padding: 10px; /* Увеличение отступов для элементов */
+    width: 100%; /* Ширина 100% для мобильных */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+  }
 }
 /* Адаптация для устройств с шириной до 1000px */
 @media (max-width: 1000px) {
@@ -208,174 +210,179 @@ a {
   }
 
   .top-header a {
-        font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
-        margin: 5px 0; /* Отступ между ссылками */
-    }
-
+    font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
+    margin: 5px 0; /* Отступ между ссылками */
+  }
 }
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width:100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-content a:nth-child(1) {
-    color: #59422E;
-    background-color: rgba(247, 243, 214, 0.46);
+  color: #59422e;
+  background-color: rgba(247, 243, 214, 0.46);
 }
 
 .dropdown-content a:nth-child(2) {
-    color: #183969;
-    background-color: rgba(168, 208, 251, 0.46);
+  color: #183969;
+  background-color: rgba(168, 208, 251, 0.46);
 }
 
 .dropdown-content a:nth-child(3) {
-    color: #a9dd38;
-    background-color: #3B2716;
+  color: #a9dd38;
+  background-color: #3b2716;
 }
 
 .dropdown-content a:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 /* Форма регистрации */
 .registration-form {
-    display: none; /* Скрыта по умолчанию */
-    position: absolute;
-    background-image: url('gp2.png'); /* Задаём изображение в качестве фона */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 12px; /* Добавлен скругленный угол */
-    padding: 30px; /* Просторные внутренние отступы */
-    top: 60%;
-    right: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Улучшена тень */
-    z-index: 100;
+  display: none; /* Скрыта по умолчанию */
+  position: absolute;
+  background-image: url("gp2.png"); /* Задаём изображение в качестве фона */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px; /* Добавлен скругленный угол */
+  padding: 30px; /* Просторные внутренние отступы */
+  top: 60%;
+  right: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Улучшена тень */
+  z-index: 100;
 
-    width: 512px;
-    height: 512px;
-    text-align: left;
-    animation: fadeIn 0.3s ease-in-out; /* Добавлена легкая анимация появления */
+  width: 512px;
+  height: 512px;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out; /* Добавлена легкая анимация появления */
 }
 
 .registration-form h3 {
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    color: #fff; /* Цвет заголовка */
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
+  font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
+  color: #fff; /* Цвет заголовка */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
 /* Стили для всех input */
 .registration-form label {
-    color: rgba(237, 234, 216, 1);
-    margin-bottom: 5px;
-    display: block;
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    font-size: 20px;
+  color: rgba(237, 234, 216, 1);
+  margin-bottom: 5px;
+  display: block;
+  font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 .registration-form input[type="text"],
 .registration-form input[type="email"],
 .registration-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    font-size: 14px;
-    color: #2d2d2d;
-    background-color: rgba(234, 232, 226, 1);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #2d2d2d;
+  background-color: rgba(234, 232, 226, 1);
 }
 
 .registration-form input[type="submit"] {
-    display: block;
-    background-color: #704d29; /* Цвет кнопки */
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+  display: block;
+  background-color: #704d29; /* Цвет кнопки */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .registration-form input[type="submit"]:hover {
-    background-color: #5b3d21; /* Темнее при наведении */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  background-color: #5b3d21; /* Темнее при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Стили для кнопок */
 .username-btn {
-    background: linear-gradient(90deg, rgba(56, 31, 7, 0.8), rgba(118, 65, 14, 0.8));
-    color: #dcc8b7;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 26px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    margin: 18px 34px;
-
+  background: linear-gradient(
+    90deg,
+    rgba(56, 31, 7, 0.8),
+    rgba(118, 65, 14, 0.8)
+  );
+  color: #dcc8b7;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 26px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin: 18px 34px;
 }
 
 /* Эффект при наведении на кнопку */
 .username-btn:hover {
-    background: linear-gradient(90deg, rgba(118, 65, 14, 0.9), rgba(56, 31, 7, 0.9)); /* Изменение градиента */
-    transform: translateY(-2px); /* Небольшое поднятие кнопки */
+  background: linear-gradient(
+    90deg,
+    rgba(118, 65, 14, 0.9),
+    rgba(56, 31, 7, 0.9)
+  ); /* Изменение градиента */
+  transform: translateY(-2px); /* Небольшое поднятие кнопки */
 }
 
 /* Для ссылки внутри кнопки */
 .username-btn a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Устанавливаем цвет текста как у родителя */
+  text-decoration: none; /* Убираем подчеркивание */
+  color: inherit; /* Устанавливаем цвет текста как у родителя */
 }
 
 .username-btn a:hover {
-    text-decoration: underline; /* Подчеркивание ссылки при наведении */
+  text-decoration: underline; /* Подчеркивание ссылки при наведении */
 }
 
 h1 {
-    color:white;
-
+  color: white;
 }
 
 /* Анимация появления */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Hover-эффект */
 .hover-wrapper:hover .registration-form,
 .registration-form:hover {
-    display: block;
+  display: block;
 }
