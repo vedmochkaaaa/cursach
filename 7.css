@@ -249,114 +249,38 @@ a {
 
 .dropdown-content a:nth-child(3) {
     color: #a9dd38;
-    background-color: #3B2716;
+    background-image: url('gp2.png')
 }
 
 .dropdown-content a:hover {
     opacity: 0.8;
 }
-/* Форма регистрации */
-.registration-form {
-    display: none; /* Скрыта по умолчанию */
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
     position: absolute;
-    background-image: url('gp2.png'); /* Задаём изображение в качестве фона */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 12px; /* Добавлен скругленный угол */
-    padding: 30px; /* Просторные внутренние отступы */
-    top: 60%;
-    right: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Улучшена тень */
-    z-index: 100;
-
-    width: 512px;
-    height: 512px;
-    text-align: left;
-    animation: fadeIn 0.3s ease-in-out; /* Добавлена легкая анимация появления */
+    min-width:100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.registration-form h3 {
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    color: #fff; /* Цвет заголовка */
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-/* Стили для всех input */
-.registration-form label {
-    color: rgba(237, 234, 216, 1);
-    margin-bottom: 5px;
+.dropdown1:hover .dropdown-content1 {
     display: block;
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    font-size: 20px;
 }
 
-.registration-form input[type="text"],
-.registration-form input[type="email"],
-.registration-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    font-size: 14px;
-    color: #2d2d2d;
-    background-color: rgba(234, 232, 226, 1);
-}
-
-.registration-form input[type="submit"] {
+.dropdown-content1 a {
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
-    background-color: #704d29; /* Цвет кнопки */
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
 }
 
-.registration-form input[type="submit"]:hover {
-    background-color: #5b3d21; /* Темнее при наведении */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+.dropdown-content1 a:hover {
+    opacity: 0.8;
 }
-
-/* Стили для кнопок */
-.username-btn {
-    background: linear-gradient(90deg, rgba(56, 31, 7, 0.8), rgba(118, 65, 14, 0.8));
-    color: #dcc8b7;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 26px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    margin: 18px 34px;
-
-}
-
-/* Эффект при наведении на кнопку */
-.username-btn:hover {
-    background: linear-gradient(90deg, rgba(118, 65, 14, 0.9), rgba(56, 31, 7, 0.9)); /* Изменение градиента */
-    transform: translateY(-2px); /* Небольшое поднятие кнопки */
-}
-
-/* Для ссылки внутри кнопки */
-.username-btn a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Устанавливаем цвет текста как у родителя */
-}
-
-.username-btn a:hover {
-    text-decoration: underline; /* Подчеркивание ссылки при наведении */
-}
-
 h1 {
     color:white;
 
@@ -374,11 +298,7 @@ h1 {
     }
 }
 
-/* Hover-эффект */
-.hover-wrapper:hover .registration-form,
-.registration-form:hover {
-    display: block;
-}
+
 
 
 

@@ -1,18 +1,134 @@
-/* Подключение сброса стилей */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-
-body{
-  background-color: black;
--webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  margin: 10px;
-  padding: 0;
+body {
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 0;
 }
 
-.relative-container {
-    position: relative; /* Относительное позиционирование для родителя */
-    display: inline-block; /* Универсальный блок для обработки содержимого */
+.container {
+    display: flex;
+    justify-content: center; /* Центрирование основного изображения */
+    align-items: center; /* Вертикальное выравнивание */
+    position: relative; /* Для абсолютного позиционирования наложенных изображений */
 }
+
+.container1 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bottom-image {
+    position: relative;
+    bottom: 10px; /* Отступ от низа */
+    right: 10px; /* Отступ от правого края */
+    width: 30%; /* Ширина нижнего изображения */
+    z-index: 1; /* Уровень над фоновым изображением */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Плавный переход */
+}
+
+.bottom-image:hover {
+    transform: scale(1.1); /* Увеличение размера при наведении */
+    border-radius: 138px;
+    background-color: purple;
+}
+
+.layout-image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-images {
+    position: absolute;
+    display: flex; /* flex для размещения наложенных изображений в ряд */
+    justify-content: space-around; /* Распределение наложенных изображений с отступами */
+    width: 100%; /* Занять полную ширину контейнера */
+    top: 25%; /* Расположение относительно основного изображения */
+}
+
+.overlay-image {
+    margin: 10px; /* Отступы вокруг наложенных изображений */
+    transition: transform 0.3s ease; /* Плавный переход для эффекта увеличения */
+}
+
+.overlay-image:hover {
+    transform: scale(1.1); /* Увеличение размера при наведении на каждую картинку */
+}
+
+.overlay-images1 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between; /* Или space-evenly по вашему желанию */
+    flex-wrap: nowrap;
+    align-items: center;
+    width: auto; /* Убедитесь, что ширина динамическая для мобильных размеров */
+    margin: 0; /* Уберите margin с родителя */
+}
+
+.overlay-image1, .overlay-image {
+    margin: 0 15px; /* Установите отступы между самими изображениями */
+}
+
+.overlay-images1 .overlay-image1:nth-of-type(3) {
+    height: 75%;
+}
+
+.overlay-images1 .overlay-image1:nth-of-type(1) {
+    height: 75%;
+    margin: 0px 100px; /* Уберите отступ справа у последнего изображения */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    body {
+        margin: 10px; /* Уменьшаем отступы на мобильных */
+    }
+
+    .overlay-images {
+        top: 20%; /* Смещаем сверху для лучшего вида */
+    }
+
+    .overlay-image {
+        margin: 5px; /* Убираем отступы между изображениями на мобильных */
+        width: 20%; /* Увеличиваем ширину наложенных изображений */
+    }
+    .overlay-images1 .overlay-image1:nth-of-type(1) {
+        margin: 0px 10px; /* Уберите отступ справа у последнего изображения */
+    }
+
+    .overlay-images1 {
+        height:60%
+    }
+}
+/* Адаптивные стили для экранов до 1000px */
+@media (max-width: 1000px) {
+    body {
+        margin: 15px; /* Уменьшаем отступы для меньших экранов */
+    }
+
+    .overlay-images {
+        top:20%; /* Смещаем сверху для лучшего вида */
+    }
+
+    .overlay-image {
+        margin: 10px; /* Убираем отступы между изображениями на меньших экранах */
+        width: 30%; /* Увеличиваем ширину наложенных изображений */
+    }
+
+    .overlay-images1 .overlay-image1:nth-of-type(1) {
+        margin: 0px 8px; /* Убираем отступ справа у последнего изображения */
+    }
+
+    .overlay-images1 {
+        height: 70%; /* Увеличиваем высоту для лучшей компоновки */
+    }
+}
+
 
 /* Базовые стили обертки */
 .top-header {
@@ -36,7 +152,6 @@ body{
     background-color: rgba(113, 77, 42, 1);
 }
 
-
 .file3-header {
     background-color: rgba(169, 221, 56, 0.68);
 }
@@ -55,12 +170,48 @@ body{
 .top-header a:hover {
     text-decoration: underline;
 }
+
 /* Стиль текстовой обертки */
 a {
     font-family: "Alumni Sans SC-SemiBold", Helvetica;
     text-decoration: none;
     font-size: 26px;
     color: #dcc8b7;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .top-header {
+        align-items: stretch;   /* Растянуть элементы на всю ширину */
+        padding: 10px;          /* Уменьшаем внутренние отступы */
+    }
+
+    .top-header a {
+        font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
+        margin: 5px 0; /* Отступ между ссылками */
+    }
+
+    .file-header,
+    .file1-header,
+    .file2-header,
+    .file3-header {
+        padding: 10px; /* Увеличение отступов для элементов */
+        width: 100%; /* Ширина 100% для мобильных */
+        box-sizing: border-box; /* Учитываем padding в ширине */
+    }
+}
+/* Адаптация для устройств с шириной до 1000px */
+@media (max-width: 1000px) {
+  .top-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .top-header a {
+        font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
+        margin: 5px 0; /* Отступ между ссылками */
+    }
+
 }
 .dropdown {
     position: relative;
@@ -206,6 +357,10 @@ a {
     text-decoration: underline; /* Подчеркивание ссылки при наведении */
 }
 
+h1 {
+    color:white;
+
+}
 
 /* Анимация появления */
 @keyframes fadeIn {
@@ -223,45 +378,4 @@ a {
 .hover-wrapper:hover .registration-form,
 .registration-form:hover {
     display: block;
-}
-
-@media (max-width: 480px) {
-    .registration-form {
-        width: 90%;
-        right: 5%;
-        top: calc(100% + 10px);
-    }
-
-    .registration-form h3 {
-        font-size: 20px;
-    }
-
-    .registration-form input[type="text"],
-    .registration-form input[type="email"],
-    .registration-form input[type="password"] {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .registration-form input[type="submit"] {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-
-/* Адаптация для устройств с шириной до 1000px */
-@media (max-width: 1000px) {
-  .top-header {
-    flex-direction: row;
-    align-items: center;
-  }
-
-a {
-    margin: 5px 0;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 3px;
-  }
-
 }
