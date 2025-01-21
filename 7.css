@@ -8,9 +8,13 @@ body {
 
 .container {
   display: flex;
-  justify-content: center; /* Центрирование основного изображения */
-  align-items: center; /* Вертикальное выравнивание */
-  position: relative; /* Для абсолютного позиционирования наложенных изображений */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body.three{
+background-color: #F7F3D6;
 }
 
 .container1 {
@@ -21,15 +25,15 @@ body {
 
 .bottom-image {
   position: relative;
-  bottom: 10px; /* Отступ от низа */
-  right: 10px; /* Отступ от правого края */
-  width: 30%; /* Ширина нижнего изображения */
-  z-index: 1; /* Уровень над фоновым изображением */
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Плавный переход */
+  bottom: 10px;
+  right: 10px;
+  width: 30%;
+  z-index: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .bottom-image:hover {
-  transform: scale(1.1); /* Увеличение размера при наведении */
+  transform: scale(1.1);
   border-radius: 138px;
   background-color: purple;
 }
@@ -41,21 +45,21 @@ body {
 
 .overlay-images {
   position: absolute;
-  display: flex; /* flex для размещения наложенных изображений в ряд */
-  justify-content: space-around; /* Распределение наложенных изображений с отступами */
-  width: 100%; /* Занять полную ширину контейнера */
-  top: 25%; /* Расположение относительно основного изображения */
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  top: 25%;
 }
 
 .overlay-image {
-  margin: 10px; /* Отступы вокруг наложенных изображений */
-  transition: transform 0.3s ease; /* Плавный переход для эффекта увеличения */
+  margin: 10px;
+  transition: transform 0.3s ease;
 }
 
 .overlay-image:hover {
   transform: scale(
     1.1
-  ); /* Увеличение размера при наведении на каждую картинку */
+  );
 }
 
 .overlay-images1 {
@@ -65,16 +69,16 @@ body {
   height: 75%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: space-between; /* Или space-evenly по вашему желанию */
+  justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-  width: auto; /* Убедитесь, что ширина динамическая для мобильных размеров */
-  margin: 0; /* Уберите margin с родителя */
+  width: auto;
+  margin: 0;
 }
 
 .overlay-image1,
 .overlay-image {
-  margin: 0 15px; /* Установите отступы между самими изображениями */
+  margin: 0 15px;
 }
 
 .overlay-images1 .overlay-image1:nth-of-type(3) {
@@ -83,25 +87,25 @@ body {
 
 .overlay-images1 .overlay-image1:nth-of-type(1) {
   height: 75%;
-  margin: 0px 100px; /* Уберите отступ справа у последнего изображения */
+  margin: 0px 100px;
 }
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
   body {
-    margin: 10px; /* Уменьшаем отступы на мобильных */
+    margin: 10px;
   }
 
   .overlay-images {
-    top: 20%; /* Смещаем сверху для лучшего вида */
+    top: 20%;
   }
 
   .overlay-image {
-    margin: 5px; /* Убираем отступы между изображениями на мобильных */
-    width: 20%; /* Увеличиваем ширину наложенных изображений */
+    margin: 5px;
+    width: 20%;
   }
   .overlay-images1 .overlay-image1:nth-of-type(1) {
-    margin: 0px 10px; /* Уберите отступ справа у последнего изображения */
+    margin: 0px 10px;
   }
 
   .overlay-images1 {
@@ -111,24 +115,24 @@ body {
 /* Адаптивные стили для экранов до 1000px */
 @media (max-width: 1000px) {
   body {
-    margin: 15px; /* Уменьшаем отступы для меньших экранов */
+    margin: 15px;
   }
 
   .overlay-images {
-    top: 20%; /* Смещаем сверху для лучшего вида */
+    top: 20%;
   }
 
   .overlay-image {
-    margin: 10px; /* Убираем отступы между изображениями на меньших экранах */
-    width: 30%; /* Увеличиваем ширину наложенных изображений */
+    margin: 10px;
+    width: 30%;
   }
 
   .overlay-images1 .overlay-image1:nth-of-type(1) {
-    margin: 0px 8px; /* Убираем отступ справа у последнего изображения */
+    margin: 0px 8px;
   }
 
   .overlay-images1 {
-    height: 70%; /* Увеличиваем высоту для лучшей компоновки */
+    height: 70%;
   }
 }
 
@@ -148,18 +152,6 @@ body {
 
 .file-header {
   background-color: rgba(113, 77, 42, 1);
-}
-
-.file1-header {
-  background-color: rgba(113, 77, 42, 1);
-}
-
-.file3-header {
-  background-color: rgba(169, 221, 56, 0.68);
-}
-
-.file2-header {
-  background-color: rgba(24, 57, 105, 1);
 }
 
 .top-header a {
@@ -184,22 +176,22 @@ a {
 /* Адаптивные стили */
 @media (max-width: 768px) {
   .top-header {
-    align-items: stretch; /* Растянуть элементы на всю ширину */
-    padding: 10px; /* Уменьшаем внутренние отступы */
+    align-items: stretch;
+    padding: 10px;
   }
 
   .top-header a {
-    font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
-    margin: 5px 0; /* Отступ между ссылками */
+    font-size: 20px;
+    margin: 5px 0;
   }
 
   .file-header,
   .file1-header,
   .file2-header,
   .file3-header {
-    padding: 10px; /* Увеличение отступов для элементов */
-    width: 100%; /* Ширина 100% для мобильных */
-    box-sizing: border-box; /* Учитываем padding в ширине */
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 /* Адаптация для устройств с шириной до 1000px */
@@ -210,8 +202,8 @@ a {
   }
 
   .top-header a {
-    font-size: 20px; /* Уменьшаем размер шрифта на мобильных */
-    margin: 5px 0; /* Отступ между ссылками */
+    font-size: 20px;
+    margin: 5px 0;
   }
 }
 .dropdown {

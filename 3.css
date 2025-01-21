@@ -1,4 +1,3 @@
-/* Устанавливаем основной фон на всю страницу */
 body {
   background-color: #181818;
   margin: 0;
@@ -8,31 +7,34 @@ body {
 
 h2 {
   color: white;
-  text-decoration: none;
 }
 
 .two {
   margin: 16px;
   padding: 16px;
-  height: 100vh; /* Высота в 100% от высоты экрана */
-  display: flex; /* Используем flexbox для вертикального расположения */
-  flex-direction: column; /* Вертикальное расположение элементов */
-  align-items: center; /* Центрируем элементы по горизонтали */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.three{
+background-color: #F7F3D6;
 }
 
 .top-header {
-  width: 100%; /* Занимаем полную ширину */
-  background-color: rgba(113, 77, 42, 1); /* Непрозрачный фон для шапки */
-  color: white; /* Цвет текста белый */
-  padding: 10px 20px; /* Отступы */
-  display: flex; /* Flexbox для расположения элементов шапки */
-  justify-content: space-around; /* Распределение элементов с равными отступами */
-  align-items: center; /* Центрируем вертикально */
-  position: fixed; /* Фиксируем шапку */
-  top: 0; /* Прикрепляем к верхней границе */
-  left: 0; /* Прикрепляем к левой границе */
-  z-index: 1000; /* Чтобы шапка была сверху других элементов */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень под шапкой */
+  width: 100%;
+  background-color: rgba(113, 77, 42, 1);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .categories {
@@ -48,15 +50,16 @@ h2 {
 }
 
 .category-card {
-  background-color: white; /* Фон карточки белый */
-  border-radius: 35px; /* Закругленные углы */
-  padding: 15px; /* Отступы внутри карточки */
-  width: 200px; /* Ширина карточки */
-  height: 200px; /* Высота карточки, чтобы сделать ее квадратной */
-  margin: 10px; /* Отступы между карточками */
-  text-align: center; /* Центрируем текст */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Более заметная тень */
+  background-color: white;
+  border-radius: 35px;
+  padding: 15px;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -86,42 +89,36 @@ h2 {
   background-color: rgba(247, 243, 214, 0.46);
 }
 
-.dropdown-content a:nth-child(2) {
-  color: #183969;
-  background-color: rgba(168, 208, 251, 0.46);
-}
-
-.dropdown-content a:nth-child(3) {
-  color: #a9dd38;
-  background-color: #3b2716;
-}
-
 .dropdown-content a:hover {
   opacity: 0.8;
 }
+
+.category-card a {
+    text-decoration:none;
+}
+
 .category-card img {
-  width: 100%; /* Полная ширина изображения */
-  height: 100%; /* Соотношение сторон */
-  border-radius: 35px; /* Закругленные углы для изображений */
-  object-fit: cover; /* Чтобы сохранить соотношение сторон изображения */
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  object-fit: cover;
 }
 
 /* Адаптивные стили для экранов до 768px */
 @media (max-width: 768px) {
   .top-header {
-    align-items: stretch; /* Растянуть элементы на всю ширину */
-    padding: 10px; /* Уменьшаем внутренние отступы */
+    align-items: stretch;
+    padding: 10px;
   }
 
   .top-header a {
-    font-size: 10px; /* Уменьшаем размер шрифта на мобильных */
-    margin: 5px 0; /* Отступ между ссылками */
+    font-size: 10px;
+    margin: 5px 0;
   }
 
   .categories {
-    align-items: center; /* Центрируем карточки по горизонтали */
+    align-items: center;
     width: 15%;
-    /* height: 50%; */
     padding: 5px;
   }
 }
@@ -129,18 +126,18 @@ h2 {
 /* Адаптивные стили для экранов до 1000px */
 @media (max-width: 1000px) {
   .top-header {
-    align-items: stretch; /* Растянуть элементы на всю ширину */
-    padding: 10px; /* Уменьшаем внутренние отступы */
+    align-items: stretch;
+    padding: 10px;
   }
 
   .top-header a {
-    font-size: 12px; /* Уменьшаем размер шрифта на экранах до 1000px */
-    margin: 5px 0; /* Отступ между ссылками */
+    font-size: 12px;
+    margin: 5px 0;
   }
 
   .categories {
-    align-items: center; /* Центрируем карточки по горизонтали */
-    width: 25%; /* Увеличиваем ширину карточек для лучшего отображения */
+    align-items: center;
+    width: 25%;
     padding: 5px;
   }
 }
@@ -150,20 +147,6 @@ h2 {
   justify-content: space-between;
   margin: 20px;
   align-items: flex-start;
-}
-
-.sf {
-  width: 109px;
-  flex: 0;
-  height: 43px;
-  font-family: "Rozha One-Regular", Helvetica;
-  font-weight: 400;
-  color: #f7f2ee;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 13.44px;
-  line-height: normal;
-  padding: 8px;
 }
 
 .top-header a {
@@ -209,11 +192,11 @@ h2 {
 @media (max-width: 768px) {
   .main-section img,
   .main-section video {
-    width: 20%; /* Полная ширина для изображений и видео */
+    width: 20%;
   }
 
   .top-header a {
-    font-size: 12px; /* Уменьшаем размер шрифта ссылок для мобильных */
+    font-size: 12px;
   }
 }
 
@@ -221,15 +204,14 @@ h2 {
 @media (max-width: 1000px) {
   .main-section img,
   .main-section video {
-    width: 40%; /* Увеличиваем ширину для изображений и видео для лучшего отображения */
+    width: 40%;
   }
 
   .top-header a {
-    font-size: 14px; /* Увеличиваем размер шрифта ссылок для более широких экранов */
+    font-size: 14px;
   }
 }
 
-//* Форма (правая часть) */
 .registration-form {
   flex: 0 1 30%;
   max-width: 50%;
@@ -297,39 +279,39 @@ h2 {
 /* Адаптивные стили для экранов до 768px */
 @media (max-width: 768px) {
   .registration-form {
-    flex: 0 1 100%; /* Полная ширина формы на мобильных */
-    max-width: 100%; /* Сбрасываем максимальную ширину */
-    margin-left: 0; /* Убираем левый отступ */
-    padding: 16px; /* Уменьшаем внутренние отступы */
+    flex: 0 1 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 16px;
   }
 
   .registration-form h2 {
-    font-size: 28px; /* Уменьшаем размер заголовка */
-    line-height: 40px; /* Уменьшаем высоту строки заголовка */
+    font-size: 28px;
+    line-height: 40px;
   }
 
   .registration-form input,
   .registration-form button {
-    height: 45px; /* Уменьшаем высоту полей ввода и кнопки */
-    font-size: 18px; /* Уменьшаем размер шрифта для мобильных */
-    margin-bottom: 30px; /* Уменьшаем отступ между полями */
+    height: 45px;
+    font-size: 18px;
+    margin-bottom: 30px;
   }
   gp {
   }
 }
 /* Форма регистрации */
 .registration-form1 {
-  display: none; /* Скрыта по умолчанию */
+  display: none;
   position: absolute;
-  background-image: url("gp2.png"); /* Задаём изображение в качестве фона */
+  background-image: url("gp2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 12px; /* Добавлен скругленный угол */
-  padding: 30px; /* Просторные внутренние отступы */
+  border-radius: 12px;
+  padding: 30px;
   top: 60%;
   right: 60px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Улучшена тень */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   z-index: 100;
   width: 512px;
   height: 512px;
@@ -339,7 +321,7 @@ h2 {
 
 .registration-form1 h3 {
   font-family: "Alumni Sans SC-SemiBold", Helvetica, sans-serif;
-  color: #fff; /* Цвет заголовка */
+  color: #fff;
   text-align: center;
   margin-bottom: 20px;
   font-size: 28px;
@@ -370,7 +352,7 @@ h2 {
 
 .registration-form1 input[type="submit"] {
   display: block;
-  background-color: #704d29; /* Цвет кнопки */
+  background-color: #704d29;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -384,7 +366,7 @@ h2 {
 }
 
 .registration-form1 input[type="submit"]:hover {
-  background-color: #5b3d21; /* Темнее при наведении */
+  background-color: #5b3d21;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -405,7 +387,6 @@ h2 {
   margin: 18px 34px;
 }
 
-/* Эффект при наведении на кнопку */
 .username-btn1:hover {
   background: linear-gradient(
     90deg,
@@ -446,10 +427,6 @@ h1 {
 .registration-form1:hover {
   display: block;
 }
-.categories {
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-}
 
 @keyframes fadeInUp {
   from {
@@ -465,7 +442,6 @@ h1 {
 .category-card {
   opacity: 0;
   animation: fadeInUp 0.5s forwards;
-  animation-delay: 0.5s; /* Задержка перед началом анимации */
 }
 
 .category-card:nth-child(1) { animation-delay: 4.6s; }
@@ -474,3 +450,90 @@ h1 {
 .category-card:nth-child(4) { animation-delay: 4.9s; }
 .category-card:nth-child(5) { animation-delay: 5s; }
 
+.registration-form2 {
+  flex: 0 1 30%;
+  max-width: 50%;
+  background-color: #312415;
+  padding: 32px;
+  margin-left: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form2 h2 {
+  font-family: "Koulen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 65px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #775436 28.22%,
+    #935a22 32.81%,
+    #ce7a29 42.45%,
+    #9e5712 52.32%,
+    #ce7a29 56.67%,
+    #8f5925 66.08%,
+    #775436 74.12%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.registration-form2 input,
+.registration-form2 button {
+  background: rgba(177, 160, 143, 1);
+  width: 100%;
+  height: 50px;
+  padding: 0px;
+  margin-bottom: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.registration-form2 button {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 31, 7, 0.63) 0%,
+    rgba(118, 65, 14, 0.63) 21%,
+    rgba(156, 86, 18, 0.63) 43%,
+    rgba(157, 87, 18, 0.63) 57%,
+    rgba(158, 87, 18, 0.63) 67%,
+    rgba(126, 70, 15, 0.63) 82%,
+    rgba(62, 34, 7, 0.63) 100%
+  );
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.registration-form2 button:hover {
+  background-color: #0056b3;
+}
+
+/* Адаптивные стили для экранов до 768px */
+@media (max-width: 768px) {
+  .registration-form {
+    flex: 0 1 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .registration-form2 h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .registration-form2 input,
+  .registration-form2 button {
+    height: 45px;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  gp {
+  }
+}
